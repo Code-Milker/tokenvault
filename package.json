@@ -1,0 +1,34 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.5",
+    "@nomiclabs/hardhat-solhint": "^3.0.1",
+    "@quadrata/contracts": "^1.0.3",
+    "hardhat": "^2.22.1",
+    "hardhat-exposed": "^0.3.13",
+    "solidity-coverage": "^0.8.6"
+  },
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "coverage": "hardhat coverage",
+    "lint": "hardhat lint",
+    "reverse-deploy-token-sep": "hardhat run scripts/reverse/deploy-tokens.js --network sepolia",
+    "reverse-deploy-vault-sep": "hardhat run scripts/reverse/deploy-vault.js --network sepolia",
+    "reverse-deploy-token-arb": "hardhat run scripts/reverse/deploy-tokens.js --network arbitrumOne",
+    "reverse-deploy-vault-arb": "hardhat run scripts/reverse/deploy-vault.js --network arbitrumOne",
+    "reverse-deploy-token-ftm": "hardhat run scripts/reverse/deploy-tokens.js --network fantom",
+    "reverse-deploy-vault-ftm": "hardhat run scripts/reverse/deploy-vault.js --network fantom",
+    "reverse-deposit-ftm": "hardhat run scripts/reverse/deposit.js --network fantom",
+    "reverse-redeem-ftm": "hardhat run scripts/reverse/redeem.js --network fantom",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:bera": "hardhat run scripts/deploy.js --network bera",
+    "deploy:arbitrumSepolia": "hardhat run scripts/deploy.js --network arbitrumSepolia"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "dotenv": "^16.3.2",
+    "remixd": "^0.2.4"
+  }
+}
